@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */; };
+		4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */; };
 		4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */; };
 		4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA2545298E64A0003FFA96 /* ContentView.swift */; };
 		4CBA2548298E64A2003FFA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA2547298E64A2003FFA96 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		4CBA2540298E64A0003FFA96 /* OddsiumCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddsiumCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsiumCTApp.swift; sourceTree = "<group>"; };
 		4CBA2545298E64A0003FFA96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C8D3AA2298E7D4100FA5686 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */,
+				4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */,
+				4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */,
+				4CBA2545298E64A0003FFA96 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4C8D3AA3298E7D4C00FA5686 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C8D3AA4298E7D5600FA5686 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4C8D3AA5298E7D6A00FA5686 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		4CBA2537298E64A0003FFA96 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +87,10 @@
 		4CBA2542298E64A0003FFA96 /* OddsiumCT */ = {
 			isa = PBXGroup;
 			children = (
-				4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */,
-				4CBA2545298E64A0003FFA96 /* ContentView.swift */,
+				4C8D3AA5298E7D6A00FA5686 /* Api */,
+				4C8D3AA4298E7D5600FA5686 /* ViewModels */,
+				4C8D3AA3298E7D4C00FA5686 /* Views */,
+				4C8D3AA2298E7D4100FA5686 /* App */,
 				4CBA2547298E64A2003FFA96 /* Assets.xcassets */,
 				4CBA2549298E64A2003FFA96 /* Preview Content */,
 			);
@@ -139,6 +177,8 @@
 			files = (
 				4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */,
 				4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */,
+				4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */,
+				4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
