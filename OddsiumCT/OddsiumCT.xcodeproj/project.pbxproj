@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5F92990FA2B00281857 /* SelectView.swift */; };
+		4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5FE2990FF0900281857 /* MatchModel.swift */; };
+		4C5BA6012990FFEB00281857 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA6002990FFEB00281857 /* ScoreModel.swift */; };
 		4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */; };
 		4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */; };
 		4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		4C5BA5F92990FA2B00281857 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
+		4C5BA5FE2990FF0900281857 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		4C5BA6002990FFEB00281857 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		4CBA2540298E64A0003FFA96 /* OddsiumCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddsiumCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5BA5FD2990FEE600281857 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BA5FE2990FF0900281857 /* MatchModel.swift */,
+				4C5BA6002990FFEB00281857 /* ScoreModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4C8D3AA2298E7D4100FA5686 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 			children = (
 				4C8D3AA5298E7D6A00FA5686 /* Api */,
 				4C8D3AA4298E7D5600FA5686 /* ViewModels */,
+				4C5BA5FD2990FEE600281857 /* Models */,
 				4C8D3AA3298E7D4C00FA5686 /* Views */,
 				4C8D3AA2298E7D4100FA5686 /* App */,
 				4CBA2547298E64A2003FFA96 /* Assets.xcassets */,
@@ -179,7 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */,
+				4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */,
 				4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */,
+				4C5BA6012990FFEB00281857 /* ScoreModel.swift in Sources */,
 				4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */,
 				4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */,
 				4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */,
