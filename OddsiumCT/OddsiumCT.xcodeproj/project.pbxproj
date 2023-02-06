@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5F92990FA2B00281857 /* SelectView.swift */; };
 		4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */; };
 		4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */; };
 		4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C5BA5F92990FA2B00281857 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		4CBA2540298E64A0003FFA96 /* OddsiumCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddsiumCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +43,6 @@
 			children = (
 				4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */,
 				4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */,
-				4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */,
 				4CBA2545298E64A0003FFA96 /* ContentView.swift */,
 			);
 			path = App;
@@ -50,6 +51,8 @@
 		4C8D3AA3298E7D4C00FA5686 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C5BA5F92990FA2B00281857 /* SelectView.swift */,
+				4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */,
 				4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */,
 				4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */,
 				4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */,
