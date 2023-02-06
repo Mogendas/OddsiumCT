@@ -14,11 +14,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
-            
-            MatchView()
-                .tabItem {
-                    Label("Match", systemImage: "arrow.left.arrow.right")
-                }
         }
     }
 }
