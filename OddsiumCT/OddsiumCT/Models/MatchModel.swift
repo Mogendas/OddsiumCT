@@ -7,20 +7,34 @@
 
 import Foundation
 
-struct MatchModel {
+struct MatchModel: Codable, Identifiable {
     let id: Int
     let name: String
     let date: String
-    let tournament_id: Int
-    let tournament_name:String
-    let tournament_flag_url: String
+    let tournamentId: Int
+    let tournamentName:String
+    let tournamentFlagUrl: String
     let status: String
-    let live_status: String
-    let ht_name: String
-    let ht_id: Int
-    let ht_flag_url: String
-    let at_name: String
-    let at_id: Int
-    let at_flag_url: String
+    let liveStatus: String
+    let htName: String
+    let htId: Int
+    let htFlagUrl: String
+    let atName: String
+    let atId: Int
+    let atFlagUrl: String
     let score: Score
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, name, date, status, score
+        case tournamentId = "tournament_id"
+        case tournamentName = "tournament_name"
+        case tournamentFlagUrl = "tournament_flag_url"
+        case liveStatus = "live_status"
+        case htName = "ht_name"
+        case htId = "ht_id"
+        case htFlagUrl = "ht_flag_url"
+        case atName = "at_name"
+        case atId = "at_id"
+        case atFlagUrl = "at_flag_url"
+    }
 }

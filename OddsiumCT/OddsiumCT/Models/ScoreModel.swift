@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct Score {
-    let ht_score: String
-    let at_score: String
-    let score_details: String
+struct Score: Codable {
+    let htScore: String
+    let atScore: String
+    let scoreDetails: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case htScore = "ht_score"
+        case atScore = "at_score"
+        case scoreDetails = "score_details"
+    }
 }
