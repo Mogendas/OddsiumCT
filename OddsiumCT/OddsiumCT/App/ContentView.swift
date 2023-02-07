@@ -14,6 +14,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
+                .toolbarBackground(Color("DarkGray"), for: .tabBar)
         }
     }
 }
