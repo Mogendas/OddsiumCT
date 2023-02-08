@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MatchView: View {
     @StateObject var viewModel: MatchViewModel
@@ -21,17 +22,20 @@ struct MatchView: View {
                                         
                     Text(viewModel.match.tournamentName)
                         .foregroundColor(.white)
-                    
-                    Image(systemName: "photo.circle.fill")
                 }
                 
-                Image(systemName: "photo.circle.fill")
+                KFImage(URL(string: "http://zeus.oddsium.com/i/\(viewModel.match.tournamentFlagUrl)"))
+                    .resizable()
+                    .frame(maxWidth: 30, maxHeight: 20)
+                    .scaledToFit()
             }
             .padding()
             .background(Color("LightGray"))
             
             HStack {
-                Image(systemName: "photo.circle.fill")
+                KFImage(URL(string: "http://zeus.oddsium.com/i/\(viewModel.match.htFlagUrl)"))
+                    .resizable()
+                    .frame(width: 50, height: 50)
                 
                 Text(viewModel.match.htName)
                     .frame(maxWidth: 110)
@@ -50,9 +54,11 @@ struct MatchView: View {
                     .foregroundColor(Color("LightGray"))
                     .multilineTextAlignment(.trailing)
                 
-                Image(systemName: "photo.circle.fill")
+                KFImage(URL(string: "http://zeus.oddsium.com/i/\(viewModel.match.atFlagUrl)"))
+                    .resizable()
+                    .frame(width: 50, height: 50)
             }
-            .padding()
+            .padding(8)
             .background(Color.gray)
             .frame(minHeight: 100)
         }

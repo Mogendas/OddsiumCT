@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0E17A929938E5900F7814F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E17A829938E5900F7814F /* APIService.swift */; };
 		4C0E17AB299397DA00F7814F /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E17AA299397DA00F7814F /* Date+Format.swift */; };
+		4C0E17B02993BF8300F7814F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4C0E17AF2993BF8300F7814F /* Kingfisher */; };
 		4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5F92990FA2B00281857 /* SelectView.swift */; };
 		4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5FE2990FF0900281857 /* MatchModel.swift */; };
 		4C5BA6012990FFEB00281857 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA6002990FFEB00281857 /* ScoreModel.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		4C0E17A829938E5900F7814F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4C0E17AA299397DA00F7814F /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		4C0E17B12993C16C00F7814F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C5BA5F92990FA2B00281857 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		4C5BA5FE2990FF0900281857 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
 		4C5BA6002990FFEB00281857 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0E17B02993BF8300F7814F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +137,7 @@
 		4CBA2542298E64A0003FFA96 /* OddsiumCT */ = {
 			isa = PBXGroup;
 			children = (
+				4C0E17B12993C16C00F7814F /* Info.plist */,
 				4C8C2F9529929817007FF5C4 /* Extensions */,
 				4C8D3AA5298E7D6A00FA5686 /* Api */,
 				4C8D3AA4298E7D5600FA5686 /* ViewModels */,
@@ -170,6 +174,9 @@
 			dependencies = (
 			);
 			name = OddsiumCT;
+			packageProductDependencies = (
+				4C0E17AF2993BF8300F7814F /* Kingfisher */,
+			);
 			productName = OddsiumCT;
 			productReference = 4CBA2540298E64A0003FFA96 /* OddsiumCT.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 4CBA2537298E64A0003FFA96;
+			packageReferences = (
+				4C0E17AE2993BF8300F7814F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4CBA2541298E64A0003FFA96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +380,7 @@
 				DEVELOPMENT_TEAM = T69772G8XN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OddsiumCT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +410,7 @@
 				DEVELOPMENT_TEAM = T69772G8XN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OddsiumCT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +451,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C0E17AE2993BF8300F7814F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C0E17AF2993BF8300F7814F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C0E17AE2993BF8300F7814F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CBA2538298E64A0003FFA96 /* Project object */;
 }
