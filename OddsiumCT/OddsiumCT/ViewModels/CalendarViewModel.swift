@@ -15,8 +15,18 @@ import Foundation
     }
     
     private func loadMatches() {
-        guard let data = dummyData.data(using: .utf8),
-              let newData = try? JSONDecoder().decode(MatchData.self, from: data) else { return }
-        self.matches = newData.data.matches
+        let apiService = APIService()
+        
+        Task {
+            do {
+                let test = try await apiService.getMatches(for: Date())
+                
+                self.matches = test?.data.matches ?? []
+                
+            } catch {
+                print("Error: \(error)")
+            }
+        }
+        
     }
 }
