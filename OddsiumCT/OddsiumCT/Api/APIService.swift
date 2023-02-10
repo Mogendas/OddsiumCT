@@ -15,6 +15,16 @@ final class APIService {
     
     let baseUrl = "https://psydreus.oddsium.com/"
     
+    func getMatchDetails(for matchId: Int) async throws -> MatchDetailData? {
+        guard let countrycode = Locale.current.language.region?.identifier else { return nil }
+        
+        let urlString = "\(baseUrl)match?submarket=1&match=\(matchId)&countrycode=\(countrycode)&oddstype=1"
+        guard let url = URL(string: urlString) else { throw APIError.runtimeError("URL error") }
+        
+        let data = try await sendRequest(url: url)
+        
+        return try JSONDecoder().decode(MatchDetailData.self, from: data)
+    }
     
     func getMatches(for date: Date) async throws -> MatchData? {
         guard let countrycode = Locale.current.language.region?.identifier else { return nil }

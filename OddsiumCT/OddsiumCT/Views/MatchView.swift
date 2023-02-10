@@ -38,21 +38,21 @@ struct MatchView: View {
                     .frame(width: 50, height: 50)
                 
                 Text(viewModel.match.htName)
-                    .frame(maxWidth: 110)
                     .foregroundColor(Color("LightGray"))
                     .multilineTextAlignment(.leading)
+                    .frame(maxWidth: 110, alignment: .leading)
                 
                 Spacer()
                 
-                Text("1 - 3")
+                Text("\(viewModel.match.score.htScore) - \(viewModel.match.score.atScore)")
                     .foregroundColor(.white)
                 
                 Spacer()
                 
                 Text(viewModel.match.atName)
-                    .frame(maxWidth: 110)
                     .foregroundColor(Color("LightGray"))
                     .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: 110, alignment: .trailing)
                 
                 KFImage(URL(string: "http://zeus.oddsium.com/i/\(viewModel.match.atFlagUrl)"))
                     .resizable()

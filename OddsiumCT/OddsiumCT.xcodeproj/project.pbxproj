@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0E17A929938E5900F7814F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E17A829938E5900F7814F /* APIService.swift */; };
 		4C0E17AB299397DA00F7814F /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E17AA299397DA00F7814F /* Date+Format.swift */; };
+		4C0E17AD2993A4C500F7814F /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E17AC2993A4C500F7814F /* MatchDetailView.swift */; };
 		4C0E17B02993BF8300F7814F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4C0E17AF2993BF8300F7814F /* Kingfisher */; };
 		4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5F92990FA2B00281857 /* SelectView.swift */; };
 		4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BA5FE2990FF0900281857 /* MatchModel.swift */; };
@@ -27,12 +28,14 @@
 		4CBA254B298E64A2003FFA96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA254A298E64A2003FFA96 /* Preview Assets.xcassets */; };
 		4CE77F9B2993D2C800BDA6CD /* MatchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE77F9A2993D2C800BDA6CD /* MatchDetailViewModel.swift */; };
 		4CE77F9D2993F05800BDA6CD /* MatchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE77F9C2993F05800BDA6CD /* MatchDetailModel.swift */; };
+		4CE77F9F29956CC400BDA6CD /* OddsOperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE77F9E29956CC400BDA6CD /* OddsOperatorView.swift */; };
 		4CE77FA1299634EC00BDA6CD /* OddsOperatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE77FA0299634EC00BDA6CD /* OddsOperatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C0E17A829938E5900F7814F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4C0E17AA299397DA00F7814F /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		4C0E17AC2993A4C500F7814F /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 		4C0E17B12993C16C00F7814F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C5BA5F92990FA2B00281857 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		4C5BA5FE2990FF0900281857 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		4CBA254A298E64A2003FFA96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CE77F9A2993D2C800BDA6CD /* MatchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailViewModel.swift; sourceTree = "<group>"; };
 		4CE77F9C2993F05800BDA6CD /* MatchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailModel.swift; sourceTree = "<group>"; };
+		4CE77F9E29956CC400BDA6CD /* OddsOperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsOperatorView.swift; sourceTree = "<group>"; };
 		4CE77FA0299634EC00BDA6CD /* OddsOperatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsOperatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 				4C5BA5F92990FA2B00281857 /* SelectView.swift */,
 				4C8D3AA8298E7E1C00FA5686 /* MatchView.swift */,
 				4C5BA60A29913D5D00281857 /* SelectViewButton.swift */,
+				4CE77F9E29956CC400BDA6CD /* OddsOperatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				4C5BA5FA2990FA2B00281857 /* SelectView.swift in Sources */,
 				4C5BA607299103E700281857 /* Matches.swift in Sources */,
 				4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */,
+				4CE77F9F29956CC400BDA6CD /* OddsOperatorView.swift in Sources */,
 				4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */,
 				4CE77F9D2993F05800BDA6CD /* MatchDetailModel.swift in Sources */,
 				4C0E17AB299397DA00F7814F /* Date+Format.swift in Sources */,
@@ -257,6 +263,7 @@
 				4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */,
 				4C0E17A929938E5900F7814F /* APIService.swift in Sources */,
 				4C5BA60B29913D5D00281857 /* SelectViewButton.swift in Sources */,
+				4C0E17AD2993A4C500F7814F /* MatchDetailView.swift in Sources */,
 				4C8D3AA9298E7E1C00FA5686 /* MatchView.swift in Sources */,
 				4C5BA60929911E8D00281857 /* DummyData.swift in Sources */,
 				4C8D3AA7298E7E0600FA5686 /* CalendarView.swift in Sources */,
