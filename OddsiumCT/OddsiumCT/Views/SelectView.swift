@@ -10,16 +10,16 @@ import SwiftUI
 struct SelectView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack {
-                SelectViewButton(title: "Yesterday", subTitle: "Dec 12", amount: 34)
-                    .frame(minWidth: 120)
-                SelectViewButton(title: "Today", subTitle: "Dec 13", amount: 34)
-                    .frame(minWidth: 120)
-                SelectViewButton(title: "Tomorrow", subTitle: "Dec 14", amount: 34)
-                    .frame(minWidth: 120)
-                SelectViewButton(title: "Wednesday", subTitle: "Dec 15", amount: 34)
-                    .frame(minWidth: 120)
-            }
+//            LazyHStack {
+//                SelectViewButton(title: "Yesterday", subTitle: "Dec 12", amount: 34)
+//                    .frame(minWidth: 120)
+//                SelectViewButton(title: "Today", subTitle: "Dec 13", amount: 34)
+//                    .frame(minWidth: 120)
+//                SelectViewButton(title: "Tomorrow", subTitle: "Dec 14", amount: 34)
+//                    .frame(minWidth: 120)
+//                SelectViewButton(title: "Wednesday", subTitle: "Dec 15", amount: 34)
+//                    .frame(minWidth: 120)
+//            }
         }
     }
 }

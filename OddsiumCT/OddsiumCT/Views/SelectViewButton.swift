@@ -5,16 +5,20 @@
 //  Created by Johan Wejdenstolpe on 2023-02-06.
 //
 
+import Foundation
 import SwiftUI
 
 struct SelectViewButton: View {
-    var title: String
-    var subTitle: String
+//    var title: String
+//    var subTitle: String
+    var date: Date
     var amount: Int
+    
+    var buttonAction: ((Date) -> Void)?
     
     var body: some View {
         Button(action: {
-            // DWkd
+            buttonAction?(date)
         }, label: {
             VStack {
                 Text("\(amount)")
@@ -23,10 +27,10 @@ struct SelectViewButton: View {
                     .background(.blue)
                     .clipShape(Circle())
                 
-                Text(title)
+                Text("title")
                     .foregroundColor(.white)
                 
-                Text(subTitle)
+                Text(date.dateAsString)
                     .foregroundColor(Color("LightGray"))
             }
             .padding()
@@ -36,7 +40,7 @@ struct SelectViewButton: View {
 
 struct SelectViewButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectViewButton(title: "Title", subTitle: "SubTitle", amount: 2)
+        SelectViewButton(date: Date(), amount: 2)
             .background(.gray)
     }
 }
