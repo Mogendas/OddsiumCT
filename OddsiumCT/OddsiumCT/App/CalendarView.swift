@@ -11,28 +11,35 @@ struct CalendarView: View {
     @StateObject var viewModel = CalendarViewModel()
     
     var body: some View {
-        VStack {
-            SelectView()
-                .background(Color("DarkGray"))
-                .frame(maxHeight: 110)
-            
-            ScrollView(.vertical, showsIndicators: false) {
+        NavigationView {
+            VStack {
+                SelectView()
+                    .background(Color("DarkGray"))
+                    .frame(maxHeight: 110)
                 
-                
-                ForEach(viewModel.matches) { match in
+                ScrollView(.vertical, showsIndicators: false) {
                     
-                    let viewModel = MatchViewModel(match: match)
-                    MatchView(viewModel: viewModel)
-                        .listRowInsets(EdgeInsets())
-                        .padding(.bottom, 8)
-                        .background(.gray)
+                    LazyVStack {
+                        ForEach(viewModel.matches) { match in
+                            
+                            let viewModel = MatchViewModel(match: match)
+                            let detailViewModel = MatchDetailViewModel(matchId: match.id)
+                            
+                            NavigationLink(destination: MatchDetailView(viewModel: detailViewModel)) {
+                                MatchView(viewModel: viewModel)
+                                    .listRowInsets(EdgeInsets())
+//                                    .padding(.bottom, 8)
+                                    .background(.gray)
+                            }
+                        }
+                        .listStyle(.plain)
+                        .background(Color.gray)
+                    }
                     
                 }
-                .listStyle(.plain)
-                .background(Color.gray)
             }
+            .background(Color("DarkGray"))
         }
-        .background(Color("DarkGray"))
     }
 }
 
