@@ -25,6 +25,7 @@
 		4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA2545298E64A0003FFA96 /* ContentView.swift */; };
 		4CBA2548298E64A2003FFA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA2547298E64A2003FFA96 /* Assets.xcassets */; };
 		4CBA254B298E64A2003FFA96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA254A298E64A2003FFA96 /* Preview Assets.xcassets */; };
+		4CE77F9D2993F05800BDA6CD /* MatchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE77F9C2993F05800BDA6CD /* MatchDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		4CBA2545298E64A0003FFA96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CBA2547298E64A2003FFA96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CBA254A298E64A2003FFA96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CE77F9C2993F05800BDA6CD /* MatchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				4C5BA5FE2990FF0900281857 /* MatchModel.swift */,
 				4C5BA6002990FFEB00281857 /* ScoreModel.swift */,
 				4C5BA606299103E700281857 /* Matches.swift */,
+				4CE77F9C2993F05800BDA6CD /* MatchDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +89,7 @@
 				4CBA2543298E64A0003FFA96 /* OddsiumCTApp.swift */,
 				4C8D3AA6298E7E0600FA5686 /* CalendarView.swift */,
 				4CBA2545298E64A0003FFA96 /* ContentView.swift */,
+				4C0E17AC2993A4C500F7814F /* MatchDetailView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -240,6 +244,7 @@
 				4C5BA607299103E700281857 /* Matches.swift in Sources */,
 				4C5BA5FF2990FF0900281857 /* MatchModel.swift in Sources */,
 				4CBA2546298E64A0003FFA96 /* ContentView.swift in Sources */,
+				4CE77F9D2993F05800BDA6CD /* MatchDetailModel.swift in Sources */,
 				4C0E17AB299397DA00F7814F /* Date+Format.swift in Sources */,
 				4C5BA6012990FFEB00281857 /* ScoreModel.swift in Sources */,
 				4CBA2544298E64A0003FFA96 /* OddsiumCTApp.swift in Sources */,
