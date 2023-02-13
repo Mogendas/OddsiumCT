@@ -13,14 +13,23 @@ struct CalendarView: View {
     var body: some View {
         NavigationView {
             VStack {
-                SelectView()
-                    .background(Color("DarkGray"))
-                    .frame(maxHeight: 110)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        ForEach(0..<viewModel.selections.count, id: \.self) { index in
+                            SelectViewButton(selection: $viewModel.selections[index], amount: 34) { selection in
+                                viewModel.selectedDate = selection.date
+                            }
+                            .frame(minWidth: 120)
+                        }
+                    }
+                }
+                .frame(height: 110)
+                .background(Color("DarkGray"))
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     
                     LazyVStack {
-                        ForEach(viewModel.matches) { match in
+                        ForEach(viewModel.selectedMatches) { match in
                             
                             let viewModel = MatchViewModel(match: match)
                             let detailViewModel = MatchDetailViewModel(matchId: match.id)
@@ -28,7 +37,6 @@ struct CalendarView: View {
                             NavigationLink(destination: MatchDetailView(viewModel: detailViewModel)) {
                                 MatchView(viewModel: viewModel)
                                     .listRowInsets(EdgeInsets())
-//                                    .padding(.bottom, 8)
                                     .background(.gray)
                             }
                         }
@@ -37,8 +45,9 @@ struct CalendarView: View {
                     }
                     
                 }
+                .background(Color("LightGray"))
             }
-            .background(Color("DarkGray"))
+            .background(Color("LightGray"))
         }
     }
 }
