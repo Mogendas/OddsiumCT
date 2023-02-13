@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct MatchModel: Codable, Identifiable {
     let id: Int
@@ -36,5 +37,15 @@ struct MatchModel: Codable, Identifiable {
         case atName = "at_name"
         case atId = "at_id"
         case atFlagUrl = "at_flag_url"
+    }
+}
+
+class Selection {
+    let date: Date
+    var isSelected: Bool
+    
+    init(date: Date, isSelected: Bool) {
+        self.date = date
+        self.isSelected = isSelected
     }
 }

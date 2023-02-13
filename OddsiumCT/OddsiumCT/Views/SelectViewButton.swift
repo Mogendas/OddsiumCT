@@ -9,38 +9,57 @@ import Foundation
 import SwiftUI
 
 struct SelectViewButton: View {
-//    var title: String
-//    var subTitle: String
-    var date: Date
+    //    var title: String
+    //    var subTitle: String
+    @Binding var selection: Selection {
+        didSet {
+            
+        }
+    }
+    
     var amount: Int
     
-    var buttonAction: ((Date) -> Void)?
+    var buttonAction: ((Selection) -> Void)?
     
     var body: some View {
-        Button(action: {
-            buttonAction?(date)
-        }, label: {
-            VStack {
-                Text("\(amount)")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .clipShape(Circle())
-                
-                Text("title")
-                    .foregroundColor(.white)
-                
-                Text(date.dateAsString)
-                    .foregroundColor(Color("LightGray"))
-            }
-            .padding()
-        })
+        ZStack {
+            Button(action: {
+                buttonAction?(selection)
+            }, label: {
+                VStack {
+                    Text("\(amount)")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .clipShape(Circle())
+                    
+                    Text("title")
+                        .foregroundColor(.white)
+                    
+                    Text(selection.date.dateAsString)
+                        .foregroundColor(Color("LightGray"))
+                }
+                .padding()
+            })
+            
+            Rectangle()
+                .foregroundColor(.blue)
+                .opacity(selection.isSelected ? 1 : 0)
+                .frame(height: 8)
+                .offset(y: 62)
+        }
+        //        .background(
+        //            Rectangle()
+        //                .foregroundColor(.blue)
+        //                .opacity(selection.isSelected ? 1 : 0)
+        //                .frame(height: 8, alignment: .bottom)
+        //        )
     }
 }
 
-struct SelectViewButton_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectViewButton(date: Date(), amount: 2)
-            .background(.gray)
-    }
-}
+//struct SelectViewButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectViewButton(selection: Selection(date: Date(), isSelected: true), amount: 2)
+//            .background(.gray)
+//    }
+//}

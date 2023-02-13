@@ -13,23 +13,18 @@ struct CalendarView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                SelectView()
-//                    .background(Color("DarkGray"))
-//                    .frame(maxHeight: 110)
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
-                        ForEach(0..<viewModel.dates.count, id: \.self) { index in
-//                            SelectViewButton(date: viewModel.dates[index], amount: 34)
-//                                .frame(minWidth: 120)
-//
-                            SelectViewButton(date: viewModel.dates[index], amount: 34) { date in
-                                viewModel.selectedDate = date
+                        ForEach(0..<viewModel.selections.count, id: \.self) { index in
+                            SelectViewButton(selection: $viewModel.selections[index], amount: 34) { selection in
+                                viewModel.selectedDate = selection.date
                             }
                             .frame(minWidth: 120)
                         }
                     }
                 }
                 .frame(height: 110)
+                .background(Color("DarkGray"))
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     
@@ -50,8 +45,9 @@ struct CalendarView: View {
                     }
                     
                 }
+                .background(Color("LightGray"))
             }
-            .background(Color("DarkGray"))
+            .background(Color("LightGray"))
         }
     }
 }

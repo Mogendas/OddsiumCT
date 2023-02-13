@@ -5,14 +5,23 @@
 //  Created by Johan Wejdenstolpe on 2023-02-06.
 //
 
-import Foundation
+import SwiftUI
 
 @MainActor class CalendarViewModel: ObservableObject {
-    @Published private(set) var dates = [Date]()
+    @Published var selections = [Selection]()
     @Published private(set) var selectedMatches = [MatchModel]()
     @Published var selectedDate = Date() {
         didSet {
-            selectedMatches = matches.filter({ $0.date.contains(selectedDate.dateAsString)})
+            for selection in selections {
+                selection.isSelected = false
+            }
+            
+            selections.first(where: { $0.date.dateAsString == selectedDate.dateAsString })?.isSelected = true
+            
+            selectedMatches = matches.filter({ $0.date.contains(selectedDate.dateAsString) })
+            selections.forEach { selection in
+                print("\(selection.date.dateAsString), \(selection.isSelected)")
+            }
         }
     }
     
@@ -24,7 +33,8 @@ import Foundation
         
         for i in 0..<numberOfDays {
             if let newDate = Calendar.current.date(byAdding: .day, value: i, to: yesterday) {
-                dates.append(newDate)
+                selections.append(Selection(date: newDate, isSelected: newDate.dateAsString == selectedDate.dateAsString ))
+//                dates.append(newDate)
             }
         }
         loadMatches()
@@ -34,10 +44,10 @@ import Foundation
         let apiService = APIService()
         matches = [MatchModel]()
         
-        dates.forEach { date in
+        selections.forEach { selection in
             Task {
                 do {
-                    let newMatches = try await apiService.getMatches(for: date)
+                    let newMatches = try await apiService.getMatches(for: selection.date)
                     
                     self.matches.append(contentsOf: newMatches?.data.matches ?? [])
                     
@@ -49,4 +59,11 @@ import Foundation
             }
         }
     }
+//    func filterSelections() {
+//        for selection in selections {
+//            selection.isSelected = false
+//        }
+//        let newSelection = selections.first(where: { $0.date.dateAsString == selectedDate.dateAsString })
+//        selectedMatches = matches.filter({ $0.date.contains(selectedDate.dateAsString)})
+//    }
 }
