@@ -27,6 +27,7 @@ import SwiftUI
     
     private var matches = [MatchModel]()
     private let numberOfDays = 4
+    private var timer: Timer?
     
     init() {
         guard let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else { return }
@@ -34,10 +35,19 @@ import SwiftUI
         for i in 0..<numberOfDays {
             if let newDate = Calendar.current.date(byAdding: .day, value: i, to: yesterday) {
                 selections.append(Selection(date: newDate, isSelected: newDate.dateAsString == selectedDate.dateAsString ))
-//                dates.append(newDate)
             }
         }
         loadMatches()
+        timer = Timer.scheduledTimer(timeInterval: 30.0,
+                                     target: self,
+                                     selector: #selector(fireDownloadTimer),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
+    deinit {
+        timer?.invalidate()
+        timer = nil
     }
     
     private func loadMatches() {
@@ -59,11 +69,9 @@ import SwiftUI
             }
         }
     }
-//    func filterSelections() {
-//        for selection in selections {
-//            selection.isSelected = false
-//        }
-//        let newSelection = selections.first(where: { $0.date.dateAsString == selectedDate.dateAsString })
-//        selectedMatches = matches.filter({ $0.date.contains(selectedDate.dateAsString)})
-//    }
+    
+    @objc
+    private func fireDownloadTimer() {
+        loadMatches()
+    }
 }
